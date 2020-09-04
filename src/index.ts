@@ -1,24 +1,13 @@
-import { hera, globalOptions } from 'hera-js';
-import { logger } from 'juno-js';
+import { name } from 'faker';
+import delay from 'delay';
 
-globalOptions.url = 'https://graphqlzero.almansi.me/api';
+import { subscribe } from './pkg/consumer';
+import { publish } from './pkg/producer';
 
-const main = async () => {
-  const { data } = await hera({
-    query: `
-      query {
-        post(id: $id) {
-          id
-          title
-          body
-        }
-      }
-    `,
-    variables: {
-      id: 1,
-    },
-  });
-  logger.info(data);
-};
+(async () => {
+  const TOPIC = 'MEOW_MOEW';
 
-main();
+  publish(TOPIC, name.jobTitle());
+  await delay(1234);
+  subscribe(TOPIC);
+})();

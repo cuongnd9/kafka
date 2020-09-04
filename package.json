@@ -24,13 +24,17 @@
     }
   },
   "dependencies": {
+    "delay": "^4.4.0",
     "diana-js": "^0.7.0",
+    "faker": "^5.1.0",
     "hera-js": "^0.4.0",
-    "juno-js": "^0.1.1"
+    "juno-js": "^0.1.1",
+    "kafka-node": "^5.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@types/faker": "^4.1.12",
     "@types/node": "^12.12.7",
     "@typescript-eslint/eslint-plugin": "^2.17.0",
     "@typescript-eslint/parser": "^2.17.0",
