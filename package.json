@@ -29,7 +29,7 @@
     "faker": "^5.1.0",
     "hera-js": "^0.4.0",
     "juno-js": "^0.1.1",
-    "kafka-node": "^5.0.0"
+    "kafkajs": "^1.15.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
