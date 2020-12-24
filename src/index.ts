@@ -13,14 +13,14 @@ const run = async () => {
   // Producing
   await producer.connect();
 
-  // setInterval(() => {
-  //   producer.send({
-  //     topic: 'test-topic',
-  //     messages: [
-  //       { value: '💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩' },
-  //     ],
-  //   })
-  // }, 5000);
+  setInterval(() => {
+    producer.send({
+      topic: 'test-topic',
+      messages: [
+        { value: '💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩' },
+      ],
+    })
+  }, 5000);
 
   // Consuming
   await consumer.connect();
